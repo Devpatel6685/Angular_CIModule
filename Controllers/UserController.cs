@@ -12,6 +12,11 @@ namespace CIPLATFORM.Controllers
     [Route("api/[controller]")]
     public class UserController : ControllerBase
     {
-         public readonly UserInterface _userInterface;
+        public readonly IUserService _userService;
+
+        public UserController(IUserService userService)
+        {
+            _userService = userService;
+        }
     }
 }

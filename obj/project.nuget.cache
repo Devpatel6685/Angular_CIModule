@@ -1,14 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "J28Xpp+ZLJbM2RbT+p1wl+bYN6CfF5TgineLdJm79Erhw3bc8qck973BiDrU78z78m8wyTMC6SGAEGL8iMrQtQ==",
+  "dgSpecHash": "YTl8KHe2UoIw8xjeXi0HjE4YQSe2Tid32otYQoPZ5qHpcYTGWgZ24/Ik8T+NJ8WG2CqMZXUGY3kWS4Yd3617dw==",
   "success": true,
   "projectFilePath": "C:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\CIPLATFORM\\CIPLATFORM.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\pce63\\.nuget\\packages\\automapper\\13.0.0\\automapper.13.0.0.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\pce63\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.0.1\\microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",

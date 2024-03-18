@@ -6,9 +6,8 @@ using CIPLATFORM.Services;
 
 namespace CIPLATFORM.Interfaces
 {
-    public interface UserInterface{
+    public interface IUserService
+    {
         
-    }
-        
-    
+    }      
 }
