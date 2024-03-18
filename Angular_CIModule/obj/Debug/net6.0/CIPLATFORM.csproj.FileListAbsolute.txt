@@ -1,0 +1,228 @@
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\appsettings.json
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\CIPLATFORM.exe
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\CIPLATFORM.deps.json
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\CIPLATFORM.runtimeconfig.json
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\CIPLATFORM.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\ref\CIPLATFORM.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\CIPLATFORM.pdb
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Azure.Core.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Azure.Identity.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Humanizer.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Mono.TextTemplating.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.Drawing.Common.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.Memory.Data.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.Runtime.Caching.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.Security.Permissions.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\System.Windows.Extensions.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.csproj.AssemblyReference.cache
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.AssemblyInfoInputs.cache
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.AssemblyInfo.cs
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.csproj.CoreCompileInputs.cache
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\scopedcss\bundle\CIPLATFORM.styles.css
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.csproj.CopyComplete
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\ref\CIPLATFORM.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.pdb
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\CIPLATFORM\obj\Debug\net6.0\CIPLATFORM.genruntimeconfig.cache
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\appsettings.Development.json
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\appsettings.json
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\CIPLATFORM.exe
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\CIPLATFORM.deps.json
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\CIPLATFORM.runtimeconfig.json
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\CIPLATFORM.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\CIPLATFORM.pdb
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\AutoMapper.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Humanizer.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.csproj.AssemblyReference.cache
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.GeneratedMSBuildEditorConfig.editorconfig
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.AssemblyInfoInputs.cache
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.AssemblyInfo.cs
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.csproj.CoreCompileInputs.cache
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.MvcApplicationPartsAssemblyInfo.cs
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.MvcApplicationPartsAssemblyInfo.cache
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\staticwebassets\msbuild.CIPLATFORM.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\staticwebassets\msbuild.build.CIPLATFORM.props
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CIPLATFORM.props
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CIPLATFORM.props
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\staticwebassets.build.json
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\staticwebassets.development.json
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\scopedcss\bundle\CIPLATFORM.styles.css
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.csproj.CopyComplete
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\refint\CIPLATFORM.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.pdb
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.genruntimeconfig.cache
+D:\Anguler project\CI_plateform\Angular_CIModule\obj\Debug\net6.0\ref\CIPLATFORM.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\CIPlatform.BAL.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\CIPlatform.DAL.dll
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\CIPlatform.BAL.pdb
+D:\Anguler project\CI_plateform\Angular_CIModule\bin\Debug\net6.0\CIPlatform.DAL.pdb
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\appsettings.Development.json
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\appsettings.json
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\CIPLATFORM.exe
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\CIPLATFORM.deps.json
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\CIPLATFORM.runtimeconfig.json
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\CIPLATFORM.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\CIPLATFORM.pdb
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\AutoMapper.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Humanizer.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\CIPlatform.BAL.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\CIPlatform.DAL.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\CIPlatform.BAL.pdb
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\CIPlatform.DAL.pdb
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.csproj.AssemblyReference.cache
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.GeneratedMSBuildEditorConfig.editorconfig
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.AssemblyInfoInputs.cache
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.AssemblyInfo.cs
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.csproj.CoreCompileInputs.cache
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.MvcApplicationPartsAssemblyInfo.cs
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.MvcApplicationPartsAssemblyInfo.cache
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\staticwebassets\msbuild.CIPLATFORM.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\staticwebassets\msbuild.build.CIPLATFORM.props
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CIPLATFORM.props
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CIPLATFORM.props
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\staticwebassets.build.json
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\staticwebassets.development.json
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\scopedcss\bundle\CIPLATFORM.styles.css
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.csproj.CopyComplete
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\refint\CIPLATFORM.dll
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.pdb
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\CIPLATFORM.genruntimeconfig.cache
+D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\obj\Debug\net6.0\ref\CIPLATFORM.dll
