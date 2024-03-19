@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T3VoUe49tcydY4mFvsA931br2B38aEJSDlW5hUPOIrWL+k5szMlkhWh9oq2KjzYzmGWgHbH7TspDlI7/R37YNg==",
+  "dgSpecHash": "soZG3g6Ybs8wj+1SA9QRnK1A1cvlAoKRM+Qn2/4Vo/WgMBGmFJSKUJZAOImdZ1nh4NMdr+JL33z/NdLioGp8dA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Backend\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj",
+  "projectFilePath": "C:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Backend\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pce63\\.nuget\\packages\\automapper\\13.0.0\\automapper.13.0.0.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",

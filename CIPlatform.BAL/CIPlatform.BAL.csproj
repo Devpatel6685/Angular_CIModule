@@ -15,6 +15,7 @@
     <PackageReference Include="MailKit" Version="4.4.0"/>
     <PackageReference Include="MimeKit" Version="4.4.0"/>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.28"/>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CIPlatform.DAL\CIPlatform.DAL.csproj"/>

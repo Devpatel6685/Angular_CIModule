@@ -11,5 +11,8 @@ namespace CIPLATFORM.Interfaces
     public interface IUserService
     {
         User Login(UserLoginDTO userLogin);
-    }      
+
+        bool IsUserExist(string email);
+        void CreateUser(User model);
+    }
 }

@@ -20,7 +20,7 @@ namespace CIPLATFORM.Controllers
         private readonly IConfiguration _config;
 
 
-        public UserController(IUserService userService,IConfiguration config)
+        public UserController(IUserService userService, IConfiguration config)
         {
             _userService = userService;
         }
@@ -33,5 +33,20 @@ namespace CIPLATFORM.Controllers
                 ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, new { token = Helper.GenerateToken(user, _config), data = user }))
                 : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.InternalServerError, new List<string> { Constants.USER_NOT_FOUND }));
         }
+
+        [HttpPost]
+        [Route("User/register")]
+        public void RegisterUser(User model)
+        {
+            _userService.CreateUser(model);
+        }
+
+        [HttpGet]
+        [Route("User/IsUserExist")]
+        public IActionResult IsUserExist(string? email)
+        {
+            return Ok(_userService.IsUserExist(email));
+        }
+
     }
 }

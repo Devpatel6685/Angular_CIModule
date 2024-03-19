@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4J3kAmQ1BhPuw8HuL22G2K0DkMFcrALy1+gHLbk5+RMqaUuFxpOW5H4xaoy7IyLojWPXagqq8p9x+srTGfIGgw==",
+  "dgSpecHash": "2eK8UBleL7c9jmWo8h+8Cvi3QDrxgP20DY0FE09u+RdgkXUgHmdVQTsF0/f8l3gy1Y7p6bPALmLgIwuWmK+guw==",
   "success": true,
   "projectFilePath": "c:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Backend\\Angular_CIModule\\CIPlatform.BAL\\CIPlatform.BAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pce63\\.nuget\\packages\\automapper\\13.0.0\\automapper.13.0.0.nupkg.sha512",
+    "C:\\Users\\pce63\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\bouncycastle.cryptography\\2.3.0\\bouncycastle.cryptography.2.3.0.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\pce63\\.nuget\\packages\\mailkit\\4.4.0\\mailkit.4.4.0.nupkg.sha512",
