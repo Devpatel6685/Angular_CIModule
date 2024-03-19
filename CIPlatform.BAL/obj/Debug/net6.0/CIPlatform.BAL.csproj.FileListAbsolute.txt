@@ -32,3 +32,20 @@ D:\Anguler project\CI_plateform\CI_Platform_backend\CIPlatform.BAL\obj\Debug\net
 D:\Anguler project\CI_plateform\CI_Platform_backend\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.pdb
 D:\Anguler project\CI_plateform\CI_Platform_backend\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.genruntimeconfig.cache
 D:\Anguler project\CI_plateform\CI_Platform_backend\CIPlatform.BAL\obj\Debug\net6.0\ref\CIPlatform.BAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\bin\Debug\net6.0\CIPlatform.BAL.deps.json
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\bin\Debug\net6.0\CIPlatform.BAL.runtimeconfig.json
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\bin\Debug\net6.0\CIPlatform.BAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\bin\Debug\net6.0\ref\CIPlatform.BAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\bin\Debug\net6.0\CIPlatform.BAL.pdb
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\bin\Debug\net6.0\CIPlatform.DAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\bin\Debug\net6.0\CIPlatform.DAL.pdb
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.csproj.AssemblyReference.cache
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.AssemblyInfoInputs.cache
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.AssemblyInfo.cs
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.csproj.CoreCompileInputs.cache
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.csproj.CopyComplete
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\obj\Debug\net6.0\ref\CIPlatform.BAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.pdb
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.BAL\obj\Debug\net6.0\CIPlatform.BAL.genruntimeconfig.cache

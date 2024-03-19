@@ -26,3 +26,17 @@ D:\Anguler project\CI_plateform\CI_Platform_backend\CIPlatform.DAL\obj\Debug\net
 D:\Anguler project\CI_plateform\CI_Platform_backend\CIPlatform.DAL\obj\Debug\net6.0\CIPlatform.DAL.pdb
 D:\Anguler project\CI_plateform\CI_Platform_backend\CIPlatform.DAL\obj\Debug\net6.0\CIPlatform.DAL.genruntimeconfig.cache
 D:\Anguler project\CI_plateform\CI_Platform_backend\CIPlatform.DAL\obj\Debug\net6.0\ref\CIPlatform.DAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\bin\Debug\net6.0\CIPlatform.DAL.deps.json
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\bin\Debug\net6.0\CIPlatform.DAL.runtimeconfig.json
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\bin\Debug\net6.0\CIPlatform.DAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\bin\Debug\net6.0\ref\CIPlatform.DAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\bin\Debug\net6.0\CIPlatform.DAL.pdb
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\obj\Debug\net6.0\CIPlatform.DAL.csproj.AssemblyReference.cache
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\obj\Debug\net6.0\CIPlatform.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\obj\Debug\net6.0\CIPlatform.DAL.AssemblyInfoInputs.cache
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\obj\Debug\net6.0\CIPlatform.DAL.AssemblyInfo.cs
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\obj\Debug\net6.0\CIPlatform.DAL.csproj.CoreCompileInputs.cache
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\obj\Debug\net6.0\CIPlatform.DAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\obj\Debug\net6.0\ref\CIPlatform.DAL.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\obj\Debug\net6.0\CIPlatform.DAL.pdb
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\CIPlatform.DAL\obj\Debug\net6.0\CIPlatform.DAL.genruntimeconfig.cache

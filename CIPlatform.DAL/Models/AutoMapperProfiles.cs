@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 using AutoMapper;
 namespace CIPLATFORM.Models
 {
-    public class AutoMapperProfiles: Profile
+    public class AutoMapperProfiles : Profile
     {
-        
+        public AutoMapperProfiles()
+        {
+        }
+
     }
 }
