@@ -23,7 +23,7 @@ namespace CIPlatform.DAL.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=PCA33\\SQL2016;Database=test;User ID=sa;Password=Tatva@123;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False;");
+                optionsBuilder.UseSqlServer("Data Source=PCA33\\SQL2016;Initial Catalog=CIPLATFORM;User ID=sa;Password=Tatva@123;TrustServerCertificate=True");
             }
         }
 
@@ -31,57 +31,73 @@ namespace CIPlatform.DAL.Models
         {
             modelBuilder.Entity<User>(entity =>
             {
-                entity.ToTable("users");
+                entity.ToTable("USER");
 
-                entity.HasIndex(e => e.Email, "UQ__users__AB6E616441257F02")
-                    .IsUnique();
+                entity.Property(e => e.Id).HasColumnName("ID");
 
-                entity.HasIndex(e => e.Username, "UQ__users__F3DBC5726BDE767E")
-                    .IsUnique();
+                entity.Property(e => e.Avatar)
+                    .HasMaxLength(255)
+                    .HasColumnName("AVATAR");
 
-                entity.Property(e => e.Id).HasColumnName("id");
+                entity.Property(e => e.Cityid).HasColumnName("CITYID");
 
-                entity.Property(e => e.City)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("city");
+                entity.Property(e => e.Countryid).HasColumnName("COUNTRYID");
+
+                entity.Property(e => e.Createdate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATEDATE");
+
+                entity.Property(e => e.Deletedate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("DELETEDATE");
+
+                entity.Property(e => e.Department)
+                    .HasMaxLength(255)
+                    .HasColumnName("DEPARTMENT");
 
                 entity.Property(e => e.Email)
-                    .HasMaxLength(100)
-                    .IsUnicode(false)
-                    .HasColumnName("email");
+                    .HasMaxLength(255)
+                    .HasColumnName("EMAIL");
 
-                entity.Property(e => e.FirstName)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("first_name");
+                entity.Property(e => e.Employeeid)
+                    .HasMaxLength(255)
+                    .HasColumnName("EMPLOYEEID");
 
-                entity.Property(e => e.LastName)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("last_name");
+                entity.Property(e => e.Firstname)
+                    .HasMaxLength(255)
+                    .HasColumnName("FIRSTNAME");
+
+                entity.Property(e => e.Lastname)
+                    .HasMaxLength(255)
+                    .HasColumnName("LASTNAME");
+
+                entity.Property(e => e.Linkedinurl)
+                    .HasMaxLength(255)
+                    .HasColumnName("LINKEDINURL");
 
                 entity.Property(e => e.Password)
-                    .HasMaxLength(100)
-                    .IsUnicode(false)
-                    .HasColumnName("password");
+                    .HasMaxLength(255)
+                    .HasColumnName("PASSWORD");
 
-                entity.Property(e => e.Phone).HasColumnName("phone");
+                entity.Property(e => e.Phonenumber).HasColumnName("PHONENUMBER");
 
-                entity.Property(e => e.State)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("state");
+                entity.Property(e => e.Profiletext).HasColumnName("PROFILETEXT");
 
-                entity.Property(e => e.StreetAddress)
-                    .HasMaxLength(150)
-                    .IsUnicode(false)
-                    .HasColumnName("street_address");
+                entity.Property(e => e.Role)
+                    .HasMaxLength(255)
+                    .HasColumnName("ROLE");
 
-                entity.Property(e => e.Username)
-                    .HasMaxLength(50)
-                    .IsUnicode(false)
-                    .HasColumnName("username");
+                entity.Property(e => e.Status).HasColumnName("STATUS");
+
+                entity.Property(e => e.Title)
+                    .HasMaxLength(255)
+                    .HasColumnName("TITLE");
+
+                entity.Property(e => e.Updatedate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("UPDATEDATE");
+
+                entity.Property(e => e.Whyivolunteer).HasColumnName("WHYIVOLUNTEER");
             });
 
             OnModelCreatingPartial(modelBuilder);
