@@ -317,3 +317,4 @@ D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\n
 D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
 D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Text.Encoding.CodePages.dll
 D:\Anguler project\CI_plateform\CI_Platform_backend\Angular_CIModule\bin\Debug\net6.0\NETCore.MailKit.dll
+C:\Users\pce63\Desktop\Backend_CIPLATFORM\Backend\Angular_CIModule\Angular_CIModule\bin\Debug\net6.0\NETCore.MailKit.dll
