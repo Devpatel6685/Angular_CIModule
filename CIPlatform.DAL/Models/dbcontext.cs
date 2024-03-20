@@ -16,6 +16,7 @@ namespace CIPlatform.DAL.Models
         {
         }
 
+        public virtual DbSet<ResetPassword> ResetPasswords { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -23,12 +24,29 @@ namespace CIPlatform.DAL.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=PCA33\\SQL2016;Initial Catalog=CIPLATFORM;User ID=sa;Password=Tatva@123;TrustServerCertificate=True");
+                optionsBuilder.UseSqlServer("Data Source=PCA33\\SQL2016;Initial Catalog=CIPLATFORM;User ID=sa;Password=Tatva@123;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=true;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<ResetPassword>(entity =>
+            {
+                entity.ToTable("ResetPassword");
+
+                entity.Property(e => e.CreatedAt).HasColumnType("datetime");
+
+                entity.Property(e => e.Token)
+                    .HasMaxLength(1000)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.ResetPasswords)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__ResetPass__UserI__4BAC3F29");
+            });
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.ToTable("USER");

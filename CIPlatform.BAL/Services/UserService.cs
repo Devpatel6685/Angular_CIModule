@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CIPlatform.DAL.Models;
+using CIPlatform.DAL.ViewModels;
 using CIPLATFORM.Interfaces;
+using Microsoft.AspNetCore.Identity;
 
 namespace CIPLATFORM.Services
 {
@@ -21,7 +23,15 @@ namespace CIPLATFORM.Services
 
         public User Login(UserLoginDTO userLogin)
         {
-            return _context.Users.Where(x => x.Email.Equals(userLogin.Email) && x.Password.Equals(userLogin.Password)).FirstOrDefault();
+            bool verified = false;
+            var user = _context.Users.Where(u => u.Email == userLogin.Email).FirstOrDefault();
+            if (user != null)
+            {
+                verified = BCrypt.Net.BCrypt.Verify(userLogin.Password, user.Password);
+                if (verified)
+                    return user;
+            }
+            return null;
         }
 
         public void CreateUser(User model)
@@ -46,5 +56,53 @@ namespace CIPLATFORM.Services
             else
                 return false;
         }
+
+        public bool ForgotPassword(string email)
+        {
+            User user = _context.Users.FirstOrDefault(x => x.Email.Equals(email));
+            if (user != null)
+            {
+                ResetPassword resetPassword = new()
+                {
+                    UserId = user.Id,
+                    Token = Guid.NewGuid().ToString(),
+                    CreatedAt = DateTime.Now,
+                };
+
+                _context.ResetPasswords.Add(resetPassword);
+                _context.SaveChanges();
+
+                var mailBody = "<h1>Click below link to reset password</h1><br><h2><a href='" + "http://localhost:4200/reset-password/" + resetPassword.Token + "'>Reset Password</a></h2>";
+                Helper.SendEmail(mailBody, user.Email);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+        public bool ResetPassword(ResetPasswordDTO resetPasswordDTO)
+        {
+            ResetPassword resetPassword = _context.ResetPasswords.FirstOrDefault(x => x.Token == resetPasswordDTO.Token);
+            if (resetPassword == null || (DateTime.Now - resetPassword.CreatedAt).TotalMinutes > 30)
+                return false;
+
+            User user = _context.Users.FirstOrDefault(x => x.Id == resetPassword.UserId);
+            if (user == null)
+                return false;
+
+            string encryptedPassword = BCrypt.Net.BCrypt.HashPassword(resetPasswordDTO.Password);
+            user.Password = encryptedPassword;
+            _context.Users.Update(user);
+            _context.SaveChanges();
+
+            var tokenList = _context.ResetPasswords.Where(a => a.Id == user.Id).ToList();
+            if (tokenList != null)
+                _context.ResetPasswords.RemoveRange(tokenList);
+            return true;
+        }
+
     }
 }

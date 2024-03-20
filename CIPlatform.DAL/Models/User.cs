@@ -5,6 +5,11 @@ namespace CIPlatform.DAL.Models
 {
     public partial class User
     {
+        public User()
+        {
+            ResetPasswords = new HashSet<ResetPassword>();
+        }
+
         public int Id { get; set; }
         public string Firstname { get; set; } = null!;
         public string Lastname { get; set; } = null!;
@@ -25,5 +30,7 @@ namespace CIPlatform.DAL.Models
         public DateTime? Updatedate { get; set; }
         public DateTime? Deletedate { get; set; }
         public string? Role { get; set; }
+
+        public virtual ICollection<ResetPassword> ResetPasswords { get; set; }
     }
 }

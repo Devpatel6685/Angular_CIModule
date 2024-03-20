@@ -2,17 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Text;
+using MailKit.Security;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-
+using MimeKit;
+using MimeKit.Text;
+using MailKit.Net.Smtp;
+using System.Xml.Linq;
+using System.Net;
 
 namespace CIPlatform.DAL.Models
 {
     public class Helper
     {
-          public static string GenerateToken(User user, IConfiguration _config)
+        public static string GenerateToken(User user, IConfiguration _config)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
@@ -27,6 +33,24 @@ namespace CIPlatform.DAL.Models
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        public static void SendEmail(string body, string email)
+        {
+            email = "devppatel6685@gmail.com";
+            MimeMessage mimeMessage = new();
+            mimeMessage.From.Add(MailboxAddress.Parse("meetjpatel02@gmail.com"));
+            mimeMessage.To.Add(MailboxAddress.Parse(email));
+            mimeMessage.Subject = "Reset Your Password";
+            mimeMessage.Body = new TextPart(TextFormat.Html) { Text = body };
+
+            // send email
+            using var smtp = new MailKit.Net.Smtp.SmtpClient();
+            smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+            smtp.Authenticate("meetjpatel02@gmail.com", "uhlm bmtm otxp pkqh");
+            smtp.Send(mimeMessage);
+            smtp.Disconnect(true);
+
         }
     }
 }

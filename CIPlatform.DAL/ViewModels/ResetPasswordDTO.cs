@@ -4,12 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CIPlatform.DAL.Models
+namespace CIPlatform.DAL.ViewModels
 {
-    public class UserLoginDTO
+    public class ResetPasswordDTO
     {
         [Required]
-        public string Email { get; set; }
+        public string Token { get; set; }
         [Required]
         public string Password { get; set; }
     }
