@@ -14,7 +14,7 @@ namespace CIPLATFORM.Interfaces
         User Login(UserLoginDTO userLogin);
 
         bool IsUserExist(string email);
-        void CreateUser(User model);
+        bool CreateUser(UserRegisterDTO userRegisterDTO);
         bool ForgotPassword(string email);
 
         bool ResetPassword(ResetPasswordDTO resetPasswordDTO);

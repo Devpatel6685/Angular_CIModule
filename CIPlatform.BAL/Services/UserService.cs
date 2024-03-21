@@ -13,12 +13,12 @@ namespace CIPLATFORM.Services
     public class UserService : IUserService
     {
         private readonly dbcontext _context;
-        private readonly IMapper mapper;
+        private readonly IMapper _mapper;
 
         public UserService(dbcontext context, IMapper mapper)
         {
             _context = context;
-            this.mapper = mapper;
+            _mapper = mapper;
         }
 
         public User Login(UserLoginDTO userLogin)
@@ -34,14 +34,18 @@ namespace CIPLATFORM.Services
             return null;
         }
 
-        public void CreateUser(User model)
+        public bool CreateUser(UserRegisterDTO userRegisterDTO)
         {
             try
             {
-                string encryptedPassword = BCrypt.Net.BCrypt.HashPassword(model.Password);
-                model.Password = encryptedPassword;
-                _context.Users.Add(model);
+                User user = _mapper.Map<User>(userRegisterDTO);
+                user.Createdate = DateTime.Now;
+                string encryptedPassword = BCrypt.Net.BCrypt.HashPassword(userRegisterDTO.Password);
+                user.Password = encryptedPassword;
+
+                _context.Users.Add(user);
                 _context.SaveChanges();
+                return true;
             }
             catch (Exception ex)
             {

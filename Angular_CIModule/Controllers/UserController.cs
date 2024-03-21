@@ -38,16 +38,22 @@ namespace CIPLATFORM.Controllers
 
         [HttpPost]
         [Route("register")]
-        public void RegisterUser(User model)
+        public ActionResult RegisterUser(UserRegisterDTO userRegisterDTO)
         {
-            _userService.CreateUser(model);
+            bool user = _userService.CreateUser(userRegisterDTO);
+            return user
+               ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }))
+               : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.InternalServerError, new List<string> { Constants.ERROR }));
         }
 
         [HttpGet]
         [Route("IsUserExist")]
-        public IActionResult IsUserExist(string? email)
+        public ActionResult IsUserExist(string? email)
         {
-            return Ok(_userService.IsUserExist(email));
+            bool user = _userService.IsUserExist(email);
+            return user
+               ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }))
+               : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.InternalServerError, new List<string> { Constants.USER_NOT_FOUND }));
         }
 
         [HttpGet("ForgotPassword")]

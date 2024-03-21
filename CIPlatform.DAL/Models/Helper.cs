@@ -37,7 +37,6 @@ namespace CIPlatform.DAL.Models
 
         public static void SendEmail(string body, string email)
         {
-            email = "devppatel6685@gmail.com";
             MimeMessage mimeMessage = new();
             mimeMessage.From.Add(MailboxAddress.Parse("meetjpatel02@gmail.com"));
             mimeMessage.To.Add(MailboxAddress.Parse(email));
