@@ -7,6 +7,10 @@ namespace CIPlatform.DAL.Models
     {
         public User()
         {
+            Comments = new HashSet<Comment>();
+            FavouriteMissions = new HashSet<FavouriteMission>();
+            MissionApplications = new HashSet<MissionApplication>();
+            MissionRatings = new HashSet<MissionRating>();
             ResetPasswords = new HashSet<ResetPassword>();
         }
 
@@ -31,6 +35,10 @@ namespace CIPlatform.DAL.Models
         public DateTime? Deletedate { get; set; }
         public string? Role { get; set; }
 
+        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<FavouriteMission> FavouriteMissions { get; set; }
+        public virtual ICollection<MissionApplication> MissionApplications { get; set; }
+        public virtual ICollection<MissionRating> MissionRatings { get; set; }
         public virtual ICollection<ResetPassword> ResetPasswords { get; set; }
     }
 }
