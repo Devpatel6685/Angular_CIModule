@@ -20,7 +20,7 @@ namespace CIPlatform.DAL.Models
         public long ThemeId { get; set; }
         public long CityId { get; set; }
         public long CountryId { get; set; }
-        public string Title { get; set; }
+        public string? Title { get; set; }
         public string? ShortDescription { get; set; }
         public string? Description { get; set; }
         public DateTime? StartDate { get; set; }
@@ -33,9 +33,9 @@ namespace CIPlatform.DAL.Models
         public DateTime? UpdatedAt { get; set; }
         public DateTime? DeletedAt { get; set; }
 
-        public virtual City? City { get; set; }
-        public virtual Country? Country { get; set; }
-        public virtual MissionTheme? Theme { get; set; }
+        public virtual City City { get; set; } = null!;
+        public virtual Country Country { get; set; } = null!;
+        public virtual MissionTheme Theme { get; set; } = null!;
         public virtual ICollection<Comment> Comments { get; set; }
         public virtual ICollection<FavouriteMission> FavouriteMissions { get; set; }
         public virtual ICollection<GoalMission> GoalMissions { get; set; }

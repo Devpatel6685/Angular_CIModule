@@ -2640,8 +2640,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj": {
-              "projectPath": "C:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj"
+            "c:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj": {
+              "projectPath": "c:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj"
             }
           }
         }

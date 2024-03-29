@@ -279,11 +279,13 @@ namespace CIPlatform.DAL.Models
                 entity.HasOne(d => d.Mission)
                     .WithMany(p => p.FavouriteMissions)
                     .HasForeignKey(d => d.MissionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__FAVOURITE__MISSI__08B54D69");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.FavouriteMissions)
                     .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__FAVOURITE__USER___09A971A2");
             });
 
@@ -318,6 +320,7 @@ namespace CIPlatform.DAL.Models
                 entity.HasOne(d => d.Mission)
                     .WithMany(p => p.GoalMissions)
                     .HasForeignKey(d => d.MissionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__GOAL_MISS__MISSI__00200768");
             });
 
@@ -387,16 +390,19 @@ namespace CIPlatform.DAL.Models
                 entity.HasOne(d => d.City)
                     .WithMany(p => p.Missions)
                     .HasForeignKey(d => d.CityId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__MISSION__CITY_ID__6477ECF3");
 
                 entity.HasOne(d => d.Country)
                     .WithMany(p => p.Missions)
                     .HasForeignKey(d => d.CountryId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__MISSION__COUNTRY__656C112C");
 
                 entity.HasOne(d => d.Theme)
                     .WithMany(p => p.Missions)
                     .HasForeignKey(d => d.ThemeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__MISSION__THEME_I__6383C8BA");
             });
 
@@ -435,11 +441,13 @@ namespace CIPlatform.DAL.Models
                 entity.HasOne(d => d.Mission)
                     .WithMany(p => p.MissionApplications)
                     .HasForeignKey(d => d.MissionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__MISSION_A__MISSI__7B5B524B");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.MissionApplications)
                     .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__MISSION_A__USER___7C4F7684");
             });
 
@@ -485,6 +493,7 @@ namespace CIPlatform.DAL.Models
                 entity.HasOne(d => d.Mission)
                     .WithMany(p => p.MissionMedia)
                     .HasForeignKey(d => d.MissionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__MISSION_M__MISSI__72C60C4A");
             });
 
@@ -516,11 +525,13 @@ namespace CIPlatform.DAL.Models
                 entity.HasOne(d => d.Mission)
                     .WithMany(p => p.MissionRatings)
                     .HasForeignKey(d => d.MissionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__MISSION_R__MISSI__6E01572D");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.MissionRatings)
                     .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__MISSION_R__USER___6EF57B66");
             });
 
@@ -550,11 +561,13 @@ namespace CIPlatform.DAL.Models
                 entity.HasOne(d => d.Mission)
                     .WithMany(p => p.MissionSkills)
                     .HasForeignKey(d => d.MissionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__MISSION_S__MISSI__693CA210");
 
                 entity.HasOne(d => d.Skill)
                     .WithMany(p => p.MissionSkills)
                     .HasForeignKey(d => d.SkillId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__MISSION_S__SKILL__6A30C649");
             });
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CIPlatform.BAL.Interfaces;
 using CIPlatform.DAL.ViewModels;
 using CIPLATFORM.Common;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Angular_CIModule.Controllers
@@ -22,6 +23,7 @@ namespace Angular_CIModule.Controllers
         }
 
         [HttpPost("GetMissionsByFilter")]
+        [Authorize]
         public ActionResult GetMissionsByFilter([FromBody] MissionSearchDTO missionSearchDTO)
         {
             List<MissionListDTO> missionList = _missionService.GetMissionsByFilter(missionSearchDTO);
@@ -31,6 +33,7 @@ namespace Angular_CIModule.Controllers
         }
 
         [HttpPost("AddToFavourite")]
+        [Authorize]
         public ActionResult AddToFavourite(AddToFavouriteDTO addToFavouriteDTO)
         {
             bool result = _missionService.AddToFavourite(addToFavouriteDTO);

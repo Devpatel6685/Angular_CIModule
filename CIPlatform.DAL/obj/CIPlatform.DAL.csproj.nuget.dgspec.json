@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj": {}
+    "c:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj": {
+    "c:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj",
+        "projectUniqueName": "c:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj",
         "projectName": "CIPlatform.DAL",
-        "projectPath": "C:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj",
+        "projectPath": "c:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\CIPlatform.DAL.csproj",
         "packagesPath": "C:\\Users\\pce63\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\obj\\",
+        "outputPath": "c:\\Users\\pce63\\Desktop\\Backend_CIPLATFORM\\Angular_CIModule\\CIPlatform.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -11,7 +11,11 @@ namespace CIPlatform.DAL.ViewModels
         public string? MissionImage { get; set; }
         public string? MissionImagePath { get; set; }
         public string? City { get; set; }
+        public long CityId { get; set; }
+        public string? Country { get; set; }
+        public long CountryId { get; set; }
         public string? Theme { get; set; }
+        public long ThemeId { get; set; }
         public string? Title { get; set; }
         public string? ShortDescription { get; set; }
         public string? OrganizationName { get; set; }
@@ -21,6 +25,7 @@ namespace CIPlatform.DAL.ViewModels
         public string? GoalObjectiveText { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
+        public DateTime CreatedAt { get; set; }
         public int? SeatsLeft { get; set; }
         public string? Skill { get; set; }
         public bool IsFavourite { get; set; } = false;
