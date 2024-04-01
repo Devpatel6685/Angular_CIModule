@@ -18,5 +18,6 @@ namespace CIPLATFORM.Interfaces
         bool ForgotPassword(string email);
 
         bool ResetPassword(ResetPasswordDTO resetPasswordDTO);
+        bool CheckPassWord(string? token, string? password);
     }
 }

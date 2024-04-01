@@ -7,6 +7,7 @@ using CIPlatform.DAL.Models;
 using CIPlatform.DAL.ViewModels;
 using CIPLATFORM.Interfaces;
 using Microsoft.AspNetCore.Identity;
+using Org.BouncyCastle.Crypto;
 
 namespace CIPLATFORM.Services
 {
@@ -106,6 +107,18 @@ namespace CIPLATFORM.Services
             if (tokenList != null)
                 _context.ResetPasswords.RemoveRange(tokenList);
             return true;
+        }
+
+        public bool CheckPassWord(string? token, string? password)
+        {
+            var data = _context.ResetPasswords.Where( a => a.Token == token).FirstOrDefault();
+            if(data != null)
+            {
+                var user = _context.Users.Where(u => u.Id == data.UserId).FirstOrDefault();
+                if (BCrypt.Net.BCrypt.Verify(password, user.Password))
+                    return true;
+            }
+            return false;            
         }
 
     }
