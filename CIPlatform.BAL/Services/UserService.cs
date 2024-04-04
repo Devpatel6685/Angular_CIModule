@@ -77,8 +77,19 @@ namespace CIPLATFORM.Services
                 _context.ResetPasswords.Add(resetPassword);
                 _context.SaveChanges();
 
-                var mailBody = "<h1>Click below link to reset password</h1><br><h2><a href='" + "http://localhost:4200/reset-password/" + resetPassword.Token + "'>Reset Password</a></h2>";
-                Helper.SendEmail(mailBody, user.Email);
+                string subject = "Reset Your Password";
+                string mailBody = @"
+                <div style='font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;'>
+                <h4>Hi " + user.Firstname + " " + user.Lastname + @",</h4>
+                <p>You recently requested to reset your password for your account. Use the button below to reset it. This password reset is only valid for the next 30 Minutes.</p><br><br>
+                <a style='background-color: #007bff; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; text-decoration: none; cursor: pointer;' href='" + "http://localhost:4200/reset-password/" + resetPassword.Token + @"'>Reset your password</a>
+                <br><br>
+                <p>If you did not request for a password reset, please ignore this email.</p>
+                <p>Thanks,</p>
+                <p>The Team</p>
+                </div>";
+
+                Helper.SendEmail(mailBody, subject, user.Email);
                 return true;
             }
             else

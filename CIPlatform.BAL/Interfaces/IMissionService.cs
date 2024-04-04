@@ -20,5 +20,7 @@ namespace CIPlatform.BAL.Interfaces
 
         void SaveRatings(MissionRatingDTO ratings);
         bool CheckMissionApplied(long missionId, int userId);
+
+        bool AddRecommandToWorker(int missionId, int userId, List<RecommandUserDTO> body);
     }
 }

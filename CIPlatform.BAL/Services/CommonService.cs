@@ -46,5 +46,12 @@ namespace CIPlatform.BAL.Services
             return _context.MissionThemes.ToList();
         }
 
+        public List<RecommandUserDTO> GetAllUsers()
+        {
+            var users = _context.Users.Where(a => a.Deletedate == null).ToList();
+            var recommandUsers = _mapper.Map<List<RecommandUserDTO>>(users);
+            return recommandUsers;
+        }
+
     }
 }

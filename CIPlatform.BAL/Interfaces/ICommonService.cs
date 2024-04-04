@@ -12,12 +12,13 @@ namespace CIPlatform.BAL.Interfaces
         List<Banner> GetAllBanners();
         List<Country> GetAllCountries();
 
-         List<City> GetCitiesByCountry(string countryIds);
+        List<City> GetCitiesByCountry(string countryIds);
 
-         List<MissionTheme> GetAllThemes();
+        List<MissionTheme> GetAllThemes();
 
-         List<Skill> GetAllSkills();
+        List<Skill> GetAllSkills();
+        List<RecommandUserDTO> GetAllUsers();
 
-         
+
     }
 }

@@ -35,12 +35,12 @@ namespace CIPlatform.DAL.Models
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        public static void SendEmail(string body, string email)
+        public static void SendEmail(string body, string subject,string email)
         {
             MimeMessage mimeMessage = new();
             mimeMessage.From.Add(MailboxAddress.Parse("meetjpatel02@gmail.com"));
             mimeMessage.To.Add(MailboxAddress.Parse(email));
-            mimeMessage.Subject = "Reset Your Password";
+            mimeMessage.Subject = subject;
             mimeMessage.Body = new TextPart(TextFormat.Html) { Text = body };
 
             // send email

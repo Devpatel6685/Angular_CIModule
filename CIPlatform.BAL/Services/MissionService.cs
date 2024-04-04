@@ -201,6 +201,32 @@ namespace CIPlatform.BAL.Services
                     }).FirstOrDefault();
         }
 
+        public bool AddRecommandToWorker(int missionId, int userId, List<RecommandUserDTO> body)
+        {
+            var user = _context.Users.Where(a => a.Id == userId).FirstOrDefault();
+            var link = "http://localhost:4200/volunteering-mission/" + missionId;
+            string subject = "Mission Invitation";
+            string mailBody = @"<body style=""font-family: Arial, sans-serif; margin: 0; padding: 0;"">
+                                <div style=""max-width: 600px; margin: 20px auto; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); padding: 20px;"">
+                                <h1 style=""color: #333; text-align: center;"">Mission Invitation</h1>
+                                <div style=""margin-top: 20px;"">
+                                <p>Hi there!</p>
+                                <p>You have received a mission invitation from " + user.Firstname + " " + user.Lastname + @".</p>
+                                <p><a href=" + link + @" style=""display: inline-block; background-color: #007bff; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 5px; transition: background-color 0.3s ease;"" target=""_blank"">View Invitation</a></p>
+                                </div>
+                                </div>
+                                </body>";
+
+            foreach (var x in body)
+            {
+                if (!string.IsNullOrEmpty(x.email))
+                {
+                    Helper.SendEmail(mailBody, subject, x.email);
+                }
+            }
+            return true;
+        }
+
         public void SaveMissionApplication(long missionId, int userId)
         {
             bool isAlreadyApplied = _context.MissionApplications

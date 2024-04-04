@@ -13,6 +13,8 @@ namespace CIPLATFORM.Models
         public AutoMapperProfiles()
         {
             CreateMap<User, UserRegisterDTO>().ReverseMap();
+
+            CreateMap<RecommandUserDTO, User>().ReverseMap();
         }
 
     }
