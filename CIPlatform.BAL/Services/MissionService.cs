@@ -7,6 +7,7 @@ using CIPlatform.BAL.Interfaces;
 using CIPlatform.DAL.Models;
 using CIPlatform.DAL.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 
 namespace CIPlatform.BAL.Services
 {
@@ -91,9 +92,9 @@ namespace CIPlatform.BAL.Services
                 case "Oldest":
                     missionCards = missionCards.OrderByDescending(s => s.CreatedAt).ToList();
                     break;
-                // case 3:
-                //     missionCards = missionCards.OrderBy(s => s.EndDate).ToList();
-                //     break;
+                    // case 3:
+                    //     missionCards = missionCards.OrderBy(s => s.EndDate).ToList();
+                    //     break;
             }
             switch (missionSearchDTO.ExploreBy)
             {
@@ -141,6 +142,128 @@ namespace CIPlatform.BAL.Services
             {
                 return false;
             }
+        }
+
+        public VolunteeringMissionDTO GetVolunteeringMission(long missionId, long userId)
+        {
+            var missionRating = _context.MissionRatings.FirstOrDefault(x => x.MissionId == missionId && x.UserId == userId);
+
+            return (from m in _context.Missions
+                    where (m.DeletedAt == null && (m.MissionId == missionId))
+                    select new VolunteeringMissionDTO
+                    {
+                        MissionId = m.MissionId,
+                        City = m.City.Name,
+                        CityId = m.CityId,
+                        CountryId = m.CountryId,
+                        ThemeId = m.ThemeId,
+                        Theme = m.Theme.Title,
+                        Title = m.Title,
+                        ShortDescription = m.ShortDescription,
+                        Description = m.Description,
+                        OrganizationName = m.OrganizationName,
+                        UserRating = missionRating != null ? missionRating.Rating ?? 0 : 0,
+                        Rating = (m.MissionRatings != null && m.MissionRatings.Count > 0) ? (int)m.MissionRatings.Where(x => x.MissionId == missionId).Average(x => x.Rating) : 0,
+                        CountOfUsersRated = (m.MissionRatings != null) ? m.MissionRatings.Count(x => x.MissionId == missionId) : (int)0,
+                        MissionType = m.MissionType,
+                        GoalValue = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? m.GoalMissions.FirstOrDefault().GoalValue : 0,
+                        GoalObjectiveText = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? m.GoalMissions.FirstOrDefault().GoalObjectiveText : string.Empty,
+                        StartDate = m.StartDate,
+                        EndDate = m.EndDate,
+                        SeatsLeft = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? m.GoalMissions.FirstOrDefault().GoalValue - m.MissionApplications.Count() : 0,
+                        IsFavourite = (m.FavouriteMissions != null && m.FavouriteMissions.Count > 0) ? m.FavouriteMissions.Where(x => x.MissionId == m.MissionId && x.UserId == userId).Count() > 0 : false,
+                        missionSkills = m.MissionSkills.Where(x => x.Skill != null).Select(y => y.Skill.SkillName).ToList(),
+                        missionMedias = m.MissionMedia.ToList(),
+                        comments = m.Comments.Select(x => new CIPlatform.DAL.Models.Comment
+                        {
+                            CommentId = x.CommentId,
+                            UserId = x.UserId,
+                            MissionId = x.MissionId,
+                            ApprovalStatus = x.ApprovalStatus,
+                            CreatedAt = x.CreatedAt,
+                            UpdatedAt = x.UpdatedAt,
+                            DeletedAt = x.DeletedAt,
+                            User = new User()
+                            {
+                                Id = x.User.Id,
+                                Avatar = x.User.Avatar,
+                                Firstname = x.User.Firstname,
+                                Lastname = x.User.Lastname,
+                            },
+                        }).ToList(),
+                        volunteres = _context.Users.Select(x => new User
+                        {
+                            Id = x.Id,
+                            Avatar = x.Avatar,
+                            Firstname = x.Firstname,
+                            Lastname = x.Lastname,
+                        }).ToList(),
+                    }).FirstOrDefault();
+        }
+
+        public void SaveMissionApplication(long missionId, int userId)
+        {
+            bool isAlreadyApplied = _context.MissionApplications
+                .Any(x => x.UserId == userId && x.MissionId == missionId);
+
+            if (isAlreadyApplied)
+            {
+                return;
+            }
+
+            var application = new MissionApplication
+            {
+                MissionId = missionId,
+                UserId = userId,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            _context.MissionApplications.Add(application);
+            _context.SaveChanges();
+        }
+        public void SaveComment(CommentDTO commentObj)
+        {
+            Comment comment = new Comment()
+            {
+                MissionId = commentObj.MissionId,
+                UserId = commentObj.UserId,
+                CreatedAt = DateTime.UtcNow.ToLocalTime(),
+                ApprovalStatus = commentObj.ApprovalStatus
+            };
+            _context.Comments.Add(comment);
+            _context.SaveChanges();
+        }
+        public void SaveRatings(MissionRatingDTO ratingsObj)
+        {
+            MissionRating existingRating = _context.MissionRatings.FirstOrDefault(r => r.MissionId == ratingsObj.MissionId && r.UserId == ratingsObj.UserId);
+
+            if (existingRating != null)
+            {
+                existingRating.Rating = ratingsObj.Ratings;
+                existingRating.CreatedAt = DateTime.UtcNow.ToLocalTime();
+                _context.SaveChanges();
+            }
+            else
+            {
+                MissionRating ratings = new MissionRating()
+                {
+                    MissionId = ratingsObj.MissionId,
+                    UserId = ratingsObj.UserId,
+                    CreatedAt = DateTime.UtcNow.ToLocalTime(),
+                    Rating = ratingsObj.Ratings
+                };
+
+                _context.MissionRatings.Add(ratings);
+                _context.SaveChanges();
+            }
+        }
+
+        public bool CheckMissionApplied(long missionId, int userId)
+        {
+            bool isAlreadyApplied = _context.MissionApplications
+                .Any(x => x.UserId == userId && x.MissionId == missionId);
+
+            return isAlreadyApplied;
         }
     }
 }

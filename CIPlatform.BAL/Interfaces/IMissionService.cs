@@ -8,8 +8,17 @@ namespace CIPlatform.BAL.Interfaces
 {
     public interface IMissionService
     {
-         List<MissionListDTO> GetMissionsByFilter(MissionSearchDTO missionSearchDTO);
+        List<MissionListDTO> GetMissionsByFilter(MissionSearchDTO missionSearchDTO);
 
-         bool AddToFavourite(AddToFavouriteDTO addToFavouriteDTO);
+        VolunteeringMissionDTO GetVolunteeringMission(long missionId, long userId);
+
+        bool AddToFavourite(AddToFavouriteDTO addToFavouriteDTO);
+
+        void SaveMissionApplication(long missionId, int userId);
+
+        void SaveComment(CommentDTO comment);
+
+        void SaveRatings(MissionRatingDTO ratings);
+        bool CheckMissionApplied(long missionId, int userId);
     }
 }

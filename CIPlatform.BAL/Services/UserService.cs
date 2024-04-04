@@ -111,14 +111,14 @@ namespace CIPLATFORM.Services
 
         public bool CheckPassWord(string? token, string? password)
         {
-            var data = _context.ResetPasswords.Where( a => a.Token == token).FirstOrDefault();
-            if(data != null)
+            var data = _context.ResetPasswords.Where(a => a.Token == token).FirstOrDefault();
+            if (data != null)
             {
                 var user = _context.Users.Where(u => u.Id == data.UserId).FirstOrDefault();
                 if (BCrypt.Net.BCrypt.Verify(password, user.Password))
                     return true;
             }
-            return false;            
+            return false;
         }
 
     }
