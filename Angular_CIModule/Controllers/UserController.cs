@@ -73,10 +73,10 @@ namespace CIPLATFORM.Controllers
                 ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.RESET_PASSWORD_SUCCESS }))
                 : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.InternalServerError, new List<string> { Constants.ERROR }));
         }
-        
+
         [HttpGet]
         [Route("CheckPassWord")]
-        public ActionResult CheckPassWord(string? token,string? password)
+        public ActionResult CheckPassWord(string? token, string? password)
         {
             bool user = _userService.CheckPassWord(token, password);
             return user

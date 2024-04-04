@@ -65,5 +65,14 @@ namespace Angular_CIModule.Controllers
                 ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, skillList))
                 : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.NoContent, new List<string> { Constants.NO_DATA }));
         }
+
+        [HttpGet("GetAllUsers")]
+        public ActionResult GetAllUsers()
+        {
+            List<RecommandUserDTO> userList = _commonService.GetAllUsers();
+            return userList != null
+                ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, userList))
+                : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.NoContent, new List<string> { Constants.NO_DATA }));
+        }
     }
 }

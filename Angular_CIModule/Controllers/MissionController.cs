@@ -86,5 +86,14 @@ namespace Angular_CIModule.Controllers
                 : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.InternalServerError, new List<string> { Constants.ERROR }));
         }
 
+        [HttpPost("RecommandMissionToWorkers")]
+        public ActionResult RecommandMissionToWorkers(int missionId, int userId, [FromBody] List<RecommandUserDTO> body)
+        {
+            bool result = _missionService.AddRecommandToWorker(missionId, userId, body);
+            return result
+                ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, result))
+                : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.InternalServerError, new List<string> { Constants.ERROR }));
+        }
+
     }
 }
