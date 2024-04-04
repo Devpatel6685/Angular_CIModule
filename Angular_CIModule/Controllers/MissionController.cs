@@ -42,5 +42,49 @@ namespace Angular_CIModule.Controllers
                 : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.InternalServerError, new List<string> { Constants.ERROR }));
         }
 
+        [HttpGet("GetVolunteeringMission/{missionId}/{userId}")]
+        public ActionResult GetVolunteeringMission(long missionId, long userId)
+        {
+            VolunteeringMissionDTO mission = _missionService.GetVolunteeringMission(missionId, userId);
+
+            return mission != null
+                ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, mission))
+                : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.NoContent, new List<string> { Constants.NO_DATA }));
+        }
+
+        [HttpPost("SaveMissionApplication")]
+        public ActionResult SaveMissionApplication([FromBody] MissionUserDTO application)
+        {
+            _missionService.SaveMissionApplication(application.MissionId, application.UserId);
+
+            return this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, true));
+        }
+
+        [HttpPost("SaveComment")]
+        public ActionResult SaveComment([FromBody] CommentDTO application)
+        {
+            _missionService.SaveComment(application);
+
+            return this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, true));
+        }
+
+        [HttpPost("SaveRatings")]
+        public ActionResult SaveRatings([FromBody] MissionRatingDTO ratings)
+        {
+            _missionService.SaveRatings(ratings);
+
+            return this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, true));
+        }
+
+        [HttpGet("checkMissionApplied/{missionId}/{userId}")]
+        public ActionResult CheckMissionApplied(long missionId, int userId)
+        {
+            bool result = _missionService.CheckMissionApplied(missionId, userId);
+
+            return result
+                ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, result))
+                : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.InternalServerError, new List<string> { Constants.ERROR }));
+        }
+
     }
 }
