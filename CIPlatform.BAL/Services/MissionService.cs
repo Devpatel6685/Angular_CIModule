@@ -70,7 +70,7 @@ namespace CIPlatform.BAL.Services
             {
                 missionCards = missionCards.Where(m => missionSearchDTO.ThemeId.Contains(m.ThemeId)).ToList();
             }
-            if (missionSearchDTO.SkillId != null &&  missionSearchDTO.SkillId.Count() > 0)
+            if (missionSearchDTO.SkillId != null && missionSearchDTO.SkillId.Count() > 0)
             {
 
                 var x = _context.MissionSkills.Where(a => missionSearchDTO.SkillId.Contains(a.SkillId)).ToList();
@@ -179,60 +179,61 @@ namespace CIPlatform.BAL.Services
         public VolunteeringMissionDTO GetVolunteeringMission(long missionId, long userId)
         {
             var missionRating = _context.MissionRatings.FirstOrDefault(x => x.MissionId == missionId && x.UserId == userId);
-
-            return (from m in _context.Missions
-                    where (m.DeletedAt == null && (m.MissionId == missionId))
-                    select new VolunteeringMissionDTO
-                    {
-                        MissionId = m.MissionId,
-                        City = m.City.Name,
-                        CityId = m.CityId,
-                        CountryId = m.CountryId,
-                        ThemeId = m.ThemeId,
-                        Theme = m.Theme.Title,
-                        Title = m.Title,
-                        ShortDescription = m.ShortDescription,
-                        Description = m.Description,
-                        OrganizationName = m.OrganizationName,
-                        UserRating = missionRating != null ? missionRating.Rating ?? 0 : 0,
-                        Rating = (m.MissionRatings != null && m.MissionRatings.Count > 0) ? (int)m.MissionRatings.Where(x => x.MissionId == missionId).Average(x => x.Rating) : 0,
-                        CountOfUsersRated = (m.MissionRatings != null) ? m.MissionRatings.Count(x => x.MissionId == missionId) : (int)0,
-                        MissionType = m.MissionType,
-                        GoalValue = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? Convert.ToInt32(m.GoalMissions.FirstOrDefault().GoalValue) : 0,
-                        GoalObjectiveText = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? m.GoalMissions.FirstOrDefault().GoalObjectiveText : string.Empty,
-                        StartDate = m.StartDate,
-                        EndDate = m.EndDate,
-                        SeatsLeft = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? m.GoalMissions.FirstOrDefault().GoalValue - m.MissionApplications.Count() : 0,
-                        IsFavourite = (m.FavouriteMissions != null && m.FavouriteMissions.Count > 0) ? m.FavouriteMissions.Where(x => x.MissionId == m.MissionId && x.UserId == userId).Count() > 0 : false,
-                        missionSkills = m.MissionSkills.Where(x => x.Skill != null).Select(y => y.Skill.SkillName).ToList(),
-                        missionMedias = m.MissionMedia.ToList(),
-                        comments = m.Comments.Select(x => new CIPlatform.DAL.Models.Comment
-                        {
-                            CommentId = x.CommentId,
-                            UserId = x.UserId,
-                            MissionId = x.MissionId,
-                            ApprovalStatus = x.ApprovalStatus,
-                            CreatedAt = x.CreatedAt,
-                            UpdatedAt = x.UpdatedAt,
-                            DeletedAt = x.DeletedAt,
-                            User = new User()
-                            {
-                                Id = x.User.Id,
-                                Avatar = x.User.Avatar,
-                                Firstname = x.User.Firstname,
-                                Lastname = x.User.Lastname,
-                            },
-                        }).ToList(),
-                        volunteres = _context.Users.Select(x => new User
-                        {
-                            Id = x.Id,
-                            Avatar = x.Avatar,
-                            Firstname = x.Firstname,
-                            Lastname = x.Lastname,
-                        }).ToList(),
-                    }).FirstOrDefault();
+            var appliedVolunteers = _context.MissionApplications
+                .Include(x => x.User)
+                .Where(x => x.MissionId == missionId)
+                .ToList(); return (from m in _context.Missions
+                                   where (m.DeletedAt == null && (m.MissionId == missionId))
+                                   select new VolunteeringMissionDTO
+                                   {
+                                       MissionId = m.MissionId,
+                                       City = m.City.Name,
+                                       CityId = m.CityId,
+                                       CountryId = m.CountryId,
+                                       ThemeId = m.ThemeId,
+                                       Theme = m.Theme.Title,
+                                       Title = m.Title,
+                                       ShortDescription = m.ShortDescription,
+                                       Description = m.Description,
+                                       OrganizationName = m.OrganizationName,
+                                       UserRating = missionRating != null ? missionRating.Rating ?? 0 : 0,
+                                       Rating = (m.MissionRatings != null && m.MissionRatings.Count > 0) ? (int)m.MissionRatings.Where(x => x.MissionId == missionId).Average(x => x.Rating) : 0,
+                                       CountOfUsersRated = (m.MissionRatings != null) ? m.MissionRatings.Count(x => x.MissionId == missionId) : (int)0,
+                                       MissionType = m.MissionType,
+                                       GoalValue = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? Convert.ToInt32(m.GoalMissions.FirstOrDefault().GoalValue) : 0,
+                                       GoalObjectiveText = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? m.GoalMissions.FirstOrDefault().GoalObjectiveText : string.Empty,
+                                       StartDate = m.StartDate,
+                                       EndDate = m.EndDate,
+                                       SeatsLeft = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? m.GoalMissions.FirstOrDefault().GoalValue - m.MissionApplications.Count() : 0,
+                                       IsFavourite = (m.FavouriteMissions != null && m.FavouriteMissions.Count > 0) ? m.FavouriteMissions.Where(x => x.MissionId == m.MissionId && x.UserId == userId).Count() > 0 : false,
+                                       missionSkills = m.MissionSkills.Where(x => x.Skill != null).Select(y => y.Skill.SkillName).ToList(),
+                                       missionMedias = m.MissionMedia.ToList(),
+                                       comments = m.Comments.Select(x => new CIPlatform.DAL.Models.Comment
+                                       {
+                                           CommentId = x.CommentId,
+                                           UserId = x.UserId,
+                                           MissionId = x.MissionId,
+                                           ApprovalStatus = x.ApprovalStatus,
+                                           CreatedAt = x.CreatedAt,
+                                           UpdatedAt = x.UpdatedAt,
+                                           DeletedAt = x.DeletedAt,
+                                           User = new User()
+                                           {
+                                               Id = x.User.Id,
+                                               Avatar = x.User.Avatar,
+                                               Firstname = x.User.Firstname,
+                                               Lastname = x.User.Lastname,
+                                           },
+                                       }).ToList(),
+                                       volunteres = appliedVolunteers.Select(x => new User
+                                       {
+                                           Id = x.UserId,
+                                           Avatar = x.User.Avatar,
+                                           Firstname = x.User.Firstname,
+                                           Lastname = x.User.Lastname
+                                       }).ToList(),
+                                   }).FirstOrDefault();
         }
-
         public bool AddRecommandToWorker(int missionId, int userId, List<RecommandUserDTO> body)
         {
             var user = _context.Users.Where(a => a.Id == userId).FirstOrDefault();
