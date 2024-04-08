@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using CIPlatform.BAL.Interfaces;
+using CIPlatform.DAL.Models;
 using CIPlatform.DAL.ViewModels;
 using CIPLATFORM.Common;
 using Microsoft.AspNetCore.Authorization;
@@ -93,6 +94,15 @@ namespace Angular_CIModule.Controllers
             return result
                 ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, result))
                 : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.InternalServerError, new List<string> { Constants.ERROR }));
+        }
+
+        [HttpPost("GetRelatedMission")]
+        public ActionResult GetRelatedMission(RelatedMissionDTO RelatedMissionDTO)
+        {
+            var mission = _missionService.GetRelatedMission(RelatedMissionDTO);
+            return mission != null
+                ? this.Ok(new ApiResponse(HttpStatusCode.OK, new List<string> { Constants.SUCCESS }, mission))
+                : (ActionResult)this.Ok(new ApiResponse(HttpStatusCode.NoContent, new List<string> { Constants.NO_DATA }));
         }
 
     }

@@ -22,15 +22,15 @@ namespace CIPlatform.BAL.Services
             _mapper = mapper;
         }
 
-        public List<MissionListDTO> GetMissionsByFilter(MissionSearchDTO missionSearchDTO)
+        public List<MissionListDTO> GetMissions(int userId)
         {
             var missionCards = (from m in _context.Missions
                                 where m.DeletedAt == null
                                 select new MissionListDTO
                                 {
                                     MissionId = m.MissionId,
-                                    MissionImage = m.MissionMedia.Count > 0 ? m.MissionMedia.FirstOrDefault().MediaName : string.Empty,
-                                    MissionImagePath = m.MissionMedia.Count > 0 ? m.MissionMedia.FirstOrDefault().MediaPath : string.Empty,
+                                    MissionImage = (m.MissionMedia != null && m.MissionMedia.Count > 0) ? m.MissionMedia.FirstOrDefault().MediaName : string.Empty,
+                                    MissionImagePath = (m.MissionMedia != null && m.MissionMedia.Count > 0) ? m.MissionMedia.FirstOrDefault().MediaPath : string.Empty,
                                     City = m.City.Name,
                                     CityId = m.CityId,
                                     Country = m.Country.Name,
@@ -40,7 +40,7 @@ namespace CIPlatform.BAL.Services
                                     Title = m.Title,
                                     ShortDescription = m.ShortDescription,
                                     OrganizationName = m.OrganizationName,
-                                    Rating = m.MissionRatings.Count > 0 ? Convert.ToInt32(m.MissionRatings.FirstOrDefault().Rating) : 0,
+                                    Rating = m.MissionRatings.Count > 0 ? Convert.ToInt32(Math.Floor(m.MissionRatings.Average(a => a.Rating) ?? 0)) : 0,
                                     MissionType = m.MissionType,
                                     GoalValue = m.GoalMissions.Count > 0 ? Convert.ToInt32(m.GoalMissions.FirstOrDefault().GoalValue) : 0,
                                     GoalObjectiveText = m.GoalMissions.Count > 0 ? m.GoalMissions.FirstOrDefault().GoalObjectiveText : string.Empty,
@@ -49,22 +49,28 @@ namespace CIPlatform.BAL.Services
                                     EndDate = m.EndDate,
                                     SeatsLeft = m.GoalMissions.Count > 0 ? m.GoalMissions.FirstOrDefault().GoalValue - m.MissionApplications.Count() : 0,
                                     Skill = m.MissionSkills.Count > 0 ? m.MissionSkills.FirstOrDefault().Skill.SkillName : string.Empty,
-                                    IsFavourite = m.FavouriteMissions.Count > 0 ? m.FavouriteMissions.Where(x => x.MissionId == m.MissionId && x.UserId == missionSearchDTO.UserId).Count() > 0 : false
+                                    IsFavourite = m.FavouriteMissions.Count > 0 ? m.FavouriteMissions.Where(x => x.MissionId == m.MissionId && x.UserId == userId).Count() > 0 : false
                                 }).OrderBy(x => x.MissionId).ToList();
 
-            if (missionSearchDTO.CountryId.Count() > 0)
+            return missionCards;
+        }
+        public List<MissionListDTO> GetMissionsByFilter(MissionSearchDTO missionSearchDTO)
+        {
+            var missionCards = GetMissions(Convert.ToInt32(missionSearchDTO.UserId));
+
+            if (missionSearchDTO.CountryId != null && missionSearchDTO.CountryId.Count() > 0)
             {
                 missionCards = missionCards.Where(m => missionSearchDTO.CountryId.Contains(m.CountryId)).ToList();
             }
-            if (missionSearchDTO.CityId.Count() > 0)
+            if (missionSearchDTO.CityId != null && missionSearchDTO.CityId.Count() > 0)
             {
                 missionCards = missionCards.Where(m => missionSearchDTO.CityId.Contains(m.CityId)).ToList();
             }
-            if (missionSearchDTO.ThemeId.Count() > 0)
+            if (missionSearchDTO.ThemeId != null && missionSearchDTO.ThemeId.Count() > 0)
             {
                 missionCards = missionCards.Where(m => missionSearchDTO.ThemeId.Contains(m.ThemeId)).ToList();
             }
-            if (missionSearchDTO.SkillId.Count() > 0)
+            if (missionSearchDTO.SkillId != null &&  missionSearchDTO.SkillId.Count() > 0)
             {
 
                 var x = _context.MissionSkills.Where(a => missionSearchDTO.SkillId.Contains(a.SkillId)).ToList();
@@ -114,6 +120,32 @@ namespace CIPlatform.BAL.Services
 
             return missionCards;
         }
+
+        public List<MissionListDTO> GetRelatedMission(RelatedMissionDTO RelatedMissionDTO)
+        {
+            var missionCards = GetMissions(RelatedMissionDTO.UserId);
+
+            var Relatedmissions = new List<MissionListDTO>();
+
+            var relatedcity = missionCards.Where(u => u.CityId == RelatedMissionDTO.CityId && u.MissionId != RelatedMissionDTO.MissionId).ToList();
+            Relatedmissions.AddRange(relatedcity);
+
+            if (Relatedmissions.Count() < 3)
+            {
+                var relatedCountry = missionCards.Where(u => u.CityId != RelatedMissionDTO.CityId && u.CountryId == RelatedMissionDTO.CountryId && u.MissionId != RelatedMissionDTO.MissionId).ToList();
+                Relatedmissions.AddRange(relatedCountry);
+            }
+            if (Relatedmissions.Count() < 3)
+            {
+                var relatedTheme = missionCards.Where(u => u.CityId != RelatedMissionDTO.CityId && u.CountryId != RelatedMissionDTO.CountryId && u.ThemeId == RelatedMissionDTO.ThemeId && u.MissionId != RelatedMissionDTO.MissionId).ToList();
+                Relatedmissions.AddRange(relatedTheme);
+            }
+
+            Relatedmissions = Relatedmissions.Take(3).ToList();
+
+            return Relatedmissions;
+        }
+
         public bool AddToFavourite(AddToFavouriteDTO addToFavouriteDTO)
         {
             if (addToFavouriteDTO != null)
@@ -166,7 +198,7 @@ namespace CIPlatform.BAL.Services
                         Rating = (m.MissionRatings != null && m.MissionRatings.Count > 0) ? (int)m.MissionRatings.Where(x => x.MissionId == missionId).Average(x => x.Rating) : 0,
                         CountOfUsersRated = (m.MissionRatings != null) ? m.MissionRatings.Count(x => x.MissionId == missionId) : (int)0,
                         MissionType = m.MissionType,
-                        GoalValue = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? m.GoalMissions.FirstOrDefault().GoalValue : 0,
+                        GoalValue = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? Convert.ToInt32(m.GoalMissions.FirstOrDefault().GoalValue) : 0,
                         GoalObjectiveText = (m.GoalMissions != null && m.GoalMissions.Count > 0) ? m.GoalMissions.FirstOrDefault().GoalObjectiveText : string.Empty,
                         StartDate = m.StartDate,
                         EndDate = m.EndDate,

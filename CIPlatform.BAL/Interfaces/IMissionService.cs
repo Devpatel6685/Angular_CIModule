@@ -22,5 +22,6 @@ namespace CIPlatform.BAL.Interfaces
         bool CheckMissionApplied(long missionId, int userId);
 
         bool AddRecommandToWorker(int missionId, int userId, List<RecommandUserDTO> body);
+        List<MissionListDTO> GetRelatedMission(RelatedMissionDTO RelatedMissionDTO);
     }
 }
