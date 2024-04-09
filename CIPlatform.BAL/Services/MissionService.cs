@@ -29,8 +29,8 @@ namespace CIPlatform.BAL.Services
                                 select new MissionListDTO
                                 {
                                     MissionId = m.MissionId,
-                                    MissionImage = (m.MissionMedia != null && m.MissionMedia.Count > 0) ? m.MissionMedia.FirstOrDefault().MediaName : string.Empty,
-                                    MissionImagePath = (m.MissionMedia != null && m.MissionMedia.Count > 0) ? m.MissionMedia.FirstOrDefault().MediaPath : string.Empty,
+                                    MissionImage = (m.MissionMedia != null && m.MissionMedia.Count > 0) ? m.MissionMedia.Where( a => a.MediaType == "Image").FirstOrDefault().MediaName : string.Empty,
+                                    MissionImagePath = (m.MissionMedia != null && m.MissionMedia.Count > 0) ? m.MissionMedia.Where(a => a.MediaType == "Image").FirstOrDefault().MediaPath : string.Empty,
                                     City = m.City.Name,
                                     CityId = m.CityId,
                                     Country = m.Country.Name,
@@ -182,7 +182,9 @@ namespace CIPlatform.BAL.Services
             var appliedVolunteers = _context.MissionApplications
                 .Include(x => x.User)
                 .Where(x => x.MissionId == missionId)
-                .ToList(); return (from m in _context.Missions
+                .ToList(); 
+            
+            var mission =  (from m in _context.Missions
                                    where (m.DeletedAt == null && (m.MissionId == missionId))
                                    select new VolunteeringMissionDTO
                                    {
@@ -233,6 +235,7 @@ namespace CIPlatform.BAL.Services
                                            Lastname = x.User.Lastname
                                        }).ToList(),
                                    }).FirstOrDefault();
+            return mission;
         }
         public bool AddRecommandToWorker(int missionId, int userId, List<RecommandUserDTO> body)
         {
