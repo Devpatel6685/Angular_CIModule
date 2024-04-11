@@ -9,6 +9,7 @@ namespace CIPlatform.DAL.Models
         public int? UserId { get; set; }
         public long? MissionId { get; set; }
         public string? ApprovalStatus { get; set; }
+        public string? CommentMessage { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public DateTime? DeletedAt { get; set; }

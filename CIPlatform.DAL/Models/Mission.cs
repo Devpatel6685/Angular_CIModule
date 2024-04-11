@@ -14,6 +14,7 @@ namespace CIPlatform.DAL.Models
             MissionMedia = new HashSet<MissionMedium>();
             MissionRatings = new HashSet<MissionRating>();
             MissionSkills = new HashSet<MissionSkill>();
+            Stories = new HashSet<Story>();
         }
 
         public long MissionId { get; set; }
@@ -43,5 +44,6 @@ namespace CIPlatform.DAL.Models
         public virtual ICollection<MissionMedium> MissionMedia { get; set; }
         public virtual ICollection<MissionRating> MissionRatings { get; set; }
         public virtual ICollection<MissionSkill> MissionSkills { get; set; }
+        public virtual ICollection<Story> Stories { get; set; }
     }
 }

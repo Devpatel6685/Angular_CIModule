@@ -29,5 +29,6 @@ namespace CIPlatform.DAL.ViewModels
         public int? SeatsLeft { get; set; }
         public string? Skill { get; set; }
         public bool IsFavourite { get; set; } = false;
+        public bool MissionApplied { get; set; } = false;
     }
 }

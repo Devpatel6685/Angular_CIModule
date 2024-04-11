@@ -32,6 +32,9 @@ namespace CIPlatform.DAL.Models
         public virtual DbSet<MissionTheme> MissionThemes { get; set; } = null!;
         public virtual DbSet<ResetPassword> ResetPasswords { get; set; } = null!;
         public virtual DbSet<Skill> Skills { get; set; } = null!;
+        public virtual DbSet<Story> Stories { get; set; } = null!;
+        public virtual DbSet<StoryInvite> StoryInvites { get; set; } = null!;
+        public virtual DbSet<StoryMedium> StoryMedia { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -39,7 +42,7 @@ namespace CIPlatform.DAL.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=PCA33\\SQL2016;Initial Catalog=CIPLATFORM;User ID=sa;Password=Tatva@123;TrustServerCertificate=True");
+                optionsBuilder.UseSqlServer("Data Source=PCA33\\SQL2016;Initial Catalog=CIPLATFORM;User ID=sa;Password=Tatva@123;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=true;");
             }
         }
 
@@ -194,6 +197,11 @@ namespace CIPlatform.DAL.Models
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("APPROVAL_STATUS");
+
+                entity.Property(e => e.CommentMessage)
+                    .HasMaxLength(1000)
+                    .IsUnicode(false)
+                    .HasColumnName("COMMENT_MESSAGE");
 
                 entity.Property(e => e.CreatedAt)
                     .HasColumnType("datetime")
@@ -639,6 +647,49 @@ namespace CIPlatform.DAL.Models
                 entity.Property(e => e.UpdatedAt)
                     .HasColumnType("datetime")
                     .HasColumnName("UPDATED_AT");
+            });
+
+            modelBuilder.Entity<Story>(entity =>
+            {
+                entity.ToTable("Story");
+
+                entity.Property(e => e.Status).HasMaxLength(20);
+
+                entity.Property(e => e.Title).HasMaxLength(255);
+
+                entity.HasOne(d => d.Mission)
+                    .WithMany(p => p.Stories)
+                    .HasForeignKey(d => d.MissionId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Story_Mission_MissionId");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Stories)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_Story_User_UserId");
+            });
+
+            modelBuilder.Entity<StoryInvite>(entity =>
+            {
+                entity.ToTable("StoryInvite");
+
+                entity.HasOne(d => d.Story)
+                    .WithMany(p => p.StoryInvites)
+                    .HasForeignKey(d => d.StoryId)
+                    .OnDelete(DeleteBehavior.ClientSetNull);
+            });
+
+            modelBuilder.Entity<StoryMedium>(entity =>
+            {
+                entity.HasKey(e => e.StoryMediaId);
+
+                entity.Property(e => e.Type).HasMaxLength(8);
+
+                entity.HasOne(d => d.Story)
+                    .WithMany(p => p.StoryMedia)
+                    .HasForeignKey(d => d.StoryId)
+                    .OnDelete(DeleteBehavior.ClientSetNull);
             });
 
             modelBuilder.Entity<User>(entity =>

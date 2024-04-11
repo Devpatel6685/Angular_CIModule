@@ -12,6 +12,7 @@ namespace CIPlatform.DAL.Models
             MissionApplications = new HashSet<MissionApplication>();
             MissionRatings = new HashSet<MissionRating>();
             ResetPasswords = new HashSet<ResetPassword>();
+            Stories = new HashSet<Story>();
         }
 
         public int Id { get; set; }
@@ -40,5 +41,6 @@ namespace CIPlatform.DAL.Models
         public virtual ICollection<MissionApplication> MissionApplications { get; set; }
         public virtual ICollection<MissionRating> MissionRatings { get; set; }
         public virtual ICollection<ResetPassword> ResetPasswords { get; set; }
+        public virtual ICollection<Story> Stories { get; set; }
     }
 }

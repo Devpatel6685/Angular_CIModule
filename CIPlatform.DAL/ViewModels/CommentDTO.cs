@@ -11,5 +11,6 @@ namespace CIPlatform.DAL.ViewModels
         public int UserId { get; set; }
 
         public string? ApprovalStatus { get; set; }
+        public string? commentMessage { get; set; }
     }
 }

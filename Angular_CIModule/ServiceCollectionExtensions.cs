@@ -18,6 +18,8 @@ namespace CIPLATFORM
             services.AddScoped<ICommonService, CommonService>();
 
             services.AddScoped<IMissionService, MissionService>();
+
+            services.AddScoped<IStoryService, StoryService>();
         }
     }
 }

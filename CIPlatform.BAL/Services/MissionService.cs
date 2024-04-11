@@ -49,11 +49,13 @@ namespace CIPlatform.BAL.Services
                                     EndDate = m.EndDate,
                                     SeatsLeft = m.GoalMissions.Count > 0 ? m.GoalMissions.FirstOrDefault().GoalValue - m.MissionApplications.Count() : 0,
                                     Skill = m.MissionSkills.Count > 0 ? m.MissionSkills.FirstOrDefault().Skill.SkillName : string.Empty,
-                                    IsFavourite = m.FavouriteMissions.Count > 0 ? m.FavouriteMissions.Where(x => x.MissionId == m.MissionId && x.UserId == userId).Count() > 0 : false
+                                    IsFavourite = m.FavouriteMissions.Count > 0 ? m.FavouriteMissions.Where(x => x.MissionId == m.MissionId && x.UserId == userId).Count() > 0 : false,
+                                    MissionApplied = m.MissionApplications.Count() > 0 ? true : false
                                 }).OrderBy(x => x.MissionId).ToList();
 
             return missionCards;
         }
+
         public List<MissionListDTO> GetMissionsByFilter(MissionSearchDTO missionSearchDTO)
         {
             var missionCards = GetMissions(Convert.ToInt32(missionSearchDTO.UserId));
@@ -210,12 +212,13 @@ namespace CIPlatform.BAL.Services
                                        IsFavourite = (m.FavouriteMissions != null && m.FavouriteMissions.Count > 0) ? m.FavouriteMissions.Where(x => x.MissionId == m.MissionId && x.UserId == userId).Count() > 0 : false,
                                        missionSkills = m.MissionSkills.Where(x => x.Skill != null).Select(y => y.Skill.SkillName).ToList(),
                                        missionMedias = m.MissionMedia.ToList(),
-                                       comments = m.Comments.Select(x => new CIPlatform.DAL.Models.Comment
+                                       comments = m.Comments.Select(x => new Comment
                                        {
                                            CommentId = x.CommentId,
                                            UserId = x.UserId,
                                            MissionId = x.MissionId,
                                            ApprovalStatus = x.ApprovalStatus,
+                                           CommentMessage = x.CommentMessage,
                                            CreatedAt = x.CreatedAt,
                                            UpdatedAt = x.UpdatedAt,
                                            DeletedAt = x.DeletedAt,
@@ -290,7 +293,8 @@ namespace CIPlatform.BAL.Services
                 MissionId = commentObj.MissionId,
                 UserId = commentObj.UserId,
                 CreatedAt = DateTime.UtcNow.ToLocalTime(),
-                ApprovalStatus = commentObj.ApprovalStatus
+                ApprovalStatus = commentObj.ApprovalStatus,
+                CommentMessage = commentObj.commentMessage
             };
             _context.Comments.Add(comment);
             _context.SaveChanges();
